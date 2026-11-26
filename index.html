@@ -20,14 +20,15 @@
 <body>
 <main>
   <h1>Digital Bhakti – Privacy Policy</h1>
-  <p class="muted">Last updated: 25 November 2026</p>
+  <p class="muted">Last updated: 26 November 2026</p>
 
   <section>
     <h2>संक्षेप में (हिंदी)</h2>
     <ul>
       <li>आपका जप, माला, स्ट्रीक, दीये, ग्रंथ-पाठ की प्रगति, प्रोफ़ाइल (नाम, शहर, फ़ोटो, इष्ट देव) और भजन का इतिहास <b>आपके फ़ोन में</b> रहता है।</li>
       <li>अगर आप "Gmail से लॉगिन" करते हैं, तो इसका बैकअप <b>आपकी अपनी Google Drive</b> के एक छुपे ऐप-फ़ोल्डर (appDataFolder) में जाता है। इसे सिर्फ़ यही ऐप पढ़ सकता है – हम (डेवलपर) इसे नहीं देख सकते। ऐप आपकी Drive की बाकी फ़ाइलें नहीं देख सकता।</li>
-      <li>लॉगिन से हम सिर्फ़ आपका ईमेल और नाम लेते हैं, ताकि ऐप में दिखा सकें कि कौन-सा खाता जुड़ा है। ये फ़ोन में ही रहता है, हमारे किसी सर्वर पर नहीं जाता।</li>
+      <li>लॉगिन से हम आपका ईमेल और नाम लेते हैं। ये, आपकी प्रोफ़ाइल (नाम, शहर, इष्ट देव) और भक्ति के आँकड़े (जप, माला, स्ट्रीक, दीये, भजन के मिनट) हमारे Google Firebase खाते में रखे जाते हैं, ताकि हम ऐप बेहतर बना सकें, आपकी मदद कर सकें और आपको उपहार में दीये दे सकें। मंत्र, फ़ोटो और लोकेशन नहीं भेजे जाते।</li>
+      <li>ऐप में Google Firebase Analytics है, जो बिना नाम-ईमेल के बताता है कि ऐप के कौन-से हिस्से इस्तेमाल होते हैं।</li>
       <li>पंचांग के लिए लोकेशन (अनुमति देने पर) सिर्फ़ फ़ोन में इस्तेमाल होती है – सबसे पास का शहर ढूँढने के लिए। लोकेशन कहीं भेजी नहीं जाती।</li>
       <li>हम आपका डेटा किसी को नहीं बेचते।</li>
     </ul>
@@ -38,7 +39,10 @@
     <p>Naam Jap counts, malas and streaks; दीया (diya) balance, unlocked books and reading progress; your profile (name, city, photo, birthday, chosen deity) if you enter it; liked bhajans, playlist and listening history; app settings. This data stays on your phone.</p>
 
     <h2>2. Google login and Drive backup (optional)</h2>
-    <p>If you choose “Gmail से लॉगिन करें”, the app asks Google for the <code>drive.appdata</code> permission only. A backup file (<code>digital_bhakti_backup.json</code>) containing the data in section 1 (except the photo) is saved in the hidden app folder of <b>your own</b> Google Drive, about once a day. Only this app can read that folder; the developer cannot access it, and the app cannot see any of your other Drive files. The app also reads your Google account’s email and display name to show which account is connected. These stay on your device.</p>
+    <p>If you choose “Gmail से लॉगिन करें”, the app asks Google for the <code>drive.appdata</code> permission only. A backup file (<code>digital_bhakti_backup.json</code>) containing the data in section 1 (except the photo) is saved in the hidden app folder of <b>your own</b> Google Drive, about once a day. Only this app can read that folder; the developer cannot access it, and the app cannot see any of your other Drive files. The app also reads your Google account’s email and display name to show which account is connected.</p>
+
+    <h2>2a. Your account record (Google Firebase)</h2>
+    <p>The app creates an anonymous Firebase account for your installation and stores one record for it in our Google Cloud Firestore database: your Google email (if you logged in), name, city and chosen deity (if entered), app version, device model and Android version, and summary counts – Naam Jap totals, malas, streak, active days, bhajan minutes, दीया balance and reading progress. We use it to understand how the app is used, to support you, and to give you gift दीये or other benefits. Your mantra text, photo, location and Drive backup are not sent. This record is kept while you use the app; email us (section 10) to have it deleted.</p>
 
     <h2>3. Location</h2>
     <p>If you allow approximate location, it is used on the device to choose the nearest city for Panchang (sunrise, sunset, tithi). It is not sent to us or to any third party. You can instead pick a city by hand.</p>
@@ -47,7 +51,7 @@
     <p>Bhajans are streamed from the Sanskar content service. Your phone requests the bhajan list, images and audio from that service, which receives normal technical information such as your IP address. No account or personal profile is sent.</p>
 
     <h2>5. Crash reports, analytics and ads</h2>
-    <p>The app uses Google Firebase Crashlytics to receive crash reports (device model, Android version, app version and the error) so we can fix problems. If analytics or ads (Google AdMob) are added in future versions, they may use a device advertising ID and app usage information as described in <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps</a>; this policy will be updated before that happens. Ads are never shown during Naam Jap.</p>
+    <p>The app uses Google Firebase Crashlytics to receive crash reports (device model, Android version, app version and the error) so we can fix problems, and Google Firebase Analytics to see which features are used (for example: a mala completed, a granth chapter opened, a card shared) together with device information and an app-instance identifier. Analytics does not receive your name, email or mantra. See <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps</a>. If ads (Google AdMob) are added in future versions, this policy will be updated before that happens. Ads are never shown during Naam Jap.</p>
 
     <h2>6. Notifications</h2>
     <p>Reminders (daily jap reminder, streak reminder) are created on your phone. No personal data is sent anywhere for reminders.</p>
@@ -57,6 +61,7 @@
       <li>In the app: Profile → Google backup → “लॉगआउट” disconnects your account and revokes access.</li>
       <li>To delete the Drive backup: Google Drive (web) → Settings → Manage apps → Digital Bhakti → “Delete hidden app data”.</li>
       <li>Uninstalling the app deletes all data stored on the phone.</li>
+      <li>To delete your Firebase account record (section 2a), email us from the Gmail used in the app.</li>
     </ul>
 
     <h2>8. Children</h2>
